@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="body">
+
+
+    <script src="https://andrey-berlin.github.io/JSmoduls/tagBasic.js">
+    </script>
+
+    <script>
+        let section = document.getElementById("section");
+        section.innerHTML = `
+ <form>
+    <label for="fname">Введите код доступа к информации:</label>
+    <input type="text" id ="inPut">
+    <button type="button" id = "butTon">Проверить</button>
+</form>
+
+<div id="text"></div>
+
+
+`;
+
+        let style = document.getElementById('style');
+        style.innerHTML = `
+ 
+body {
+
+    text-align: center;
+    font-size: 25px;
+
+
+}
+
+#text {
+
+    margin: 5% auto;
+
+}
+
+
+
+`;
+
+        let button = document.getElementById("butTon");
+        button.onclick = function() {
+
+            let input = document.getElementById('inPut').value;
+            if (input == 10) {
+                let text = document.getElementById('text');
+                text.innerHTML = `Ваша Информация`;
+            } else {
+
+                let text = document.getElementById('text');
+                text.innerHTML = `Ой! Ошибка! Ппробуйте еще раз!`;
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
